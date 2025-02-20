@@ -15,7 +15,7 @@ type AppMainPageProps = {
     rentalOffersCount: number;
 }
 
-function App({rentalOffersCount} : AppMainPageProps): JSX.Element {
+function App({rentalOffersCount} : AppMainPageProps) {
     return (
         <BrowserRouter>
         <Routes>

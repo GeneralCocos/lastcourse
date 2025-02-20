@@ -1,4 +1,4 @@
-function NotFoundPage(): JSX.Element {
+function NotFoundPage() {
     return (
       <div style={{ textAlign: 'center', padding: '50px' }}>
         <h1 style={{ fontSize: '72px', marginBottom: '10px' }}>404</h1>
