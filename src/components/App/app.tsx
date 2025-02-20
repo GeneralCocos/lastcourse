@@ -7,6 +7,8 @@ import { BrowserRouter } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { AppRoute } from "../../const";
+import { AuthorizationStatus } from "../../const";
+import { PrivateRoute } from "../private-route/private-route";
 
 
 type AppMainPageProps = {
@@ -27,7 +29,14 @@ function App({rentalOffersCount} : AppMainPageProps): JSX.Element {
 
             <Route
             path={AppRoute.Favorites}
-            element={<FavoritesPage/>}/>
+            element={
+                <PrivateRoute
+                authorizationStatus={ AuthorizationStatus.NoAuth}
+                >
+                    <FavoritesPage />
+
+                </PrivateRoute>
+            }/>
 
             <Route
             path={AppRoute.Offer}
